@@ -108,4 +108,4 @@ iptables -A INPUT -m limit --limit 2/min -j LOG --log-prefix "Input-Dropped: " -
 iptables -A FORWARD -m limit --limit 2/min -j LOG --log-prefix "Forward-Dropped: " --log-level 4
 
 # Save the filter rules
-/etc/init.d/iptables save
+iptables-save > /etc/network/iptables
